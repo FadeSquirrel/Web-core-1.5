@@ -1,0 +1,152 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.brands * {
+	font-family: "TT Lakes";
+}
+
+.brands {
+	background: #F8F8F8;
+}
+
+.title {
+	height: 56px;
+	border-top: 2px solid rgba(217, 255, 245, 1);
+}
+
+.title--background {
+	background: linear-gradient(270deg, #F8F8F8 0%, #FFF 100%);
+}
+
+.title--padding {
+	padding: 16px 16px 32px;
+
+}
+
+.title-text {
+	color: #7E7E82;
+	font-family: TT Lakes;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+.brands-container {
+	width: 100%;
+	margin: 24px 32px;
+}
+
+.brands-container--flex {
+	gap: 16px;
+}
+
+.brand-item {
+	max-width: 240px;
+	height: 72px;
+	border-radius: 6px;
+	border: 1px solid #EAEAEA;
+	background: #FFF;
+	display: block;
+	padding: 16px 60px 16px 16px;
+}
+
+.brand-item--flex {
+	display: flex;
+	align-items: center;
+}
+
+.brand-item--background-image {
+	background: white url(../img/go.svg) no-repeat 180px;
+}
+
+.show-more {
+	display: none;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+	.brands-container {
+		padding-bottom: 36px;
+		position: relative;
+	}
+
+	.brands-container::after {
+		content: "";
+		display: block;
+		position: fixed;
+		width: 24px;
+		height: 81px;
+		top: 75px;
+		left: calc(100% - 24px);
+		z-index: 1;
+		background: linear-gradient(270deg, #F8F8F8 0.04%, rgba(248, 248, 248, 0.00) 100%);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.brands-container {
+		margin: 24px 32px;
+	}
+
+	.brands-container--flex {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.show-more {
+		display: block;
+		color: #1B1C21;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 24px;
+		letter-spacing: -0.2px;
+		margin-left: 31px;
+		padding-left: 32px;
+		position: relative;
+	}
+
+	.show-more--decoration::before {
+		background: url("../img/expand.svg");
+		content: "";
+		display: block;
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		left: 0;
+	}
+
+	.show-more--decoration-rotate::before {
+		transform: rotate(180deg);
+	}
+
+	.button {
+		border: none;
+		background: none;
+	}
+
+	.hidden-pc {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1120px) {
+	.hidden {
+		display: none;
+	}
+
+	.brand-item--background-image {
+		background-position: 165px;
+	}
+
+	.brand-item {
+		max-width: 224px;
+	}
+}
