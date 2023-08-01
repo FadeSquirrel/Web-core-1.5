@@ -1,14 +1,29 @@
 const swiper = new Swiper('.swiper', {
+	speed: 1000,
+	loop: true,
 	updateOnWindowResize: true,
-	
+
 	breakpoints: {
 		0: {
 			slidesPerView: 1,
 			enabled: true,
 		},
-
-		
-
+		320: {
+			slidesPerView: 1.3,
+			enabled: true,
+		},
+		360: {
+			slidesPerView: 1.47,
+			enabled: true,
+		},
+		390: {
+			slidesPerView: 1.6,
+			enabled: true,
+		},
+		420: {
+			slidesPerView: 2,
+			enabled: true,
+		},
 		768: {
 			enabled: false,
 		}
